@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-mocha-700 antialiased;
+  }
+  ::selection {
+    @apply bg-nude-200 text-mocha-800;
+  }
+  section[id] {
+    scroll-margin-top: 5rem; /* 錨點跳轉時避開固定導覽列 */
+  }
+}
+
+@layer components {
+  /* 主要按鈕：玫瑰裸底、深棕字 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-nude-400 px-7 py-3 text-sm font-semibold tracking-wide text-white shadow-soft transition-all duration-300 hover:bg-nude-500 hover:shadow-card hover:-translate-y-0.5;
+  }
+  /* 次要按鈕：透明底、深棕描邊 */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-mocha-300/60 bg-white/60 px-7 py-3 text-sm font-semibold tracking-wide text-mocha-700 transition-all duration-300 hover:border-nude-400 hover:text-nude-500 hover:-translate-y-0.5;
+  }
+  /* 區塊標題組合 */
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-nude-400;
+  }
+  .section-title {
+    @apply mt-2 font-serif text-3xl font-bold text-mocha-800 sm:text-4xl;
+  }
+}
