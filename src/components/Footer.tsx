@@ -1,5 +1,6 @@
-import { Phone, MapPin, Navigation, MessageCircle, Instagram, Sparkles } from "lucide-react";
+import { Phone, MapPin, Navigation, Sparkles } from "lucide-react";
 import { SITE } from "@/lib/site";
+import LineButton from "./LineButton";
 
 export default function Footer() {
   return (
@@ -55,29 +56,12 @@ export default function Footer() {
               </li>
             </ul>
 
-            {/* 社群連結（預留） */}
-            <div className="mt-8 flex items-center gap-3">
-              <a
-                href={SITE.line}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LINE 官方帳號"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:-translate-y-0.5 hover:bg-nude-400"
-              >
-                <MessageCircle size={17} />
-              </a>
-              <a
-                href={SITE.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:-translate-y-0.5 hover:bg-nude-400"
-              >
-                <Instagram size={17} />
-              </a>
-              <span className="text-xs text-cream-300/60">
-                LINE / Instagram（連結待補）
-              </span>
+            {/* LINE 加好友 */}
+            <div className="mt-8">
+              <LineButton />
+              <p className="mt-2 text-xs text-cream-300/60">
+                點擊複製號碼，開啟 LINE 以電話號碼搜尋加入好友
+              </p>
             </div>
 
             {/* 一鍵導航 */}

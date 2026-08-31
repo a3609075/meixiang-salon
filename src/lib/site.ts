@@ -13,8 +13,9 @@ export const SITE = {
     "https://www.google.com/maps?q=22.756250,120.311056&z=17&output=embed&hl=zh-TW",
   // 一鍵導航
   mapNav: "https://www.google.com/maps/dir/?api=1&destination=22.756250,120.311056",
-  line: "#", // TODO: 替換為 LINE 官方帳號連結
-  instagram: "#", // TODO: 替換為 Instagram 連結
+  // LINE 加好友：以電話號碼搜尋（LINE 官方不支援「電話直接跳轉」連結，故採點擊複製）
+  linePhone: "0978000812",
+  linePhoneDisplay: "0978-000-812",
 } as const;
 
 export type ServiceCategory = "nail" | "lash";
