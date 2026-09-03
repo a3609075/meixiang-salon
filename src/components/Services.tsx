@@ -78,7 +78,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3 }}
-            className="mt-8 grid gap-5 sm:grid-cols-2"
+            className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >
             {group.items.map((item) => (
               <div
